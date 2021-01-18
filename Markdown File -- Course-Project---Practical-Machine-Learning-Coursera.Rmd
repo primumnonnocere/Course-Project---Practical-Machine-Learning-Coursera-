@@ -109,6 +109,9 @@ confusionMatrix(testing$classe, predict(gbm_fit,testing))
 ### Assessment of ML model types
 From the reported accuracy values of these models, it  **random forest** is the best performing with 99.58% accuracy (although the gbm model performed almost as well at 98.93%; meanwhile, the decision tree ML model performed much worse at only 49.36% accuracy). Therefore, we will use the rf model in assessing the final testing set so as to predict the "classe" for each row.
 
+### Expected out-of-sample error (selected rf model)
+Given our selection of the rf model, we can anticapte that the expected out-of-sample error would be the difference between 1 and our accuracy, 0.9958; 1-0.9958 =0.0042. Given that there are only 20 samples in the test set used for the quiz, it is quite likely that we will get all (or nearly all) of the predictions correct.
+
 ### Quiz Submission - Test set prediction
 ```{r quiz prediction}
 prediction_quiz <- predict(rf_fit, newdata=data_testing)
