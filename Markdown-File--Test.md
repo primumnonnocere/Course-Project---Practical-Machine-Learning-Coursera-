@@ -1,9 +1,9 @@
 ---
 title: "Course Project - Practical Machine Learning (Coursera)"
 date: "1/10/2021"
-output:   
-  md_document:
-    variant: markdown_github
+output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
